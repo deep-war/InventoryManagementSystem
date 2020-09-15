@@ -1,0 +1,49 @@
+<!--
+ * price-hike-view.ejs: HTML File to list all the items in the priceHike view.
+ * @author: Sumitha Ravindran
+ * @date: 27/May/2020 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+</head>
+<body class="bg-dark">
+    <div class="container">
+<h2 class = "text-info text-center">Items in price hike view</h2>
+    <table border="1" class = "table table-dark table-striped">
+        <tr>
+            <th>id</th>
+            <th>Item Name</th>
+            <th>Price Hike</th>
+            <th>Category Name</th>   
+            <th>Updated On</th>               
+        </tr>
+        
+        <%
+        if(itemsData.length!=0){
+        var i=1;
+        itemsData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.itemName %></td>
+            <td><%=data.priceHike %></td>
+            <td><%=data.categoryName %></td>
+            <td><%=data.updatedOn %></td>                                
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Items in priceHike view</td>
+            </tr>
+        <% } %>
+    </table>
+    <a href="index">Return to the Main Page</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!--
+ * add-item.ejs: HTML File to list add an item in the items table.
+ * @author: Deepthi Warrier
+ * @date: 22/May/2020 
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Items</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+
+</head>
+<body class="bg-dark">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h2 class = "text-info text-center">Add an Item</h2>      
+      <form action="/inventory/add" method="POST" class="needs-validation" novalidate>
+        <div class="form-group">
+          <label for="itemname" class="text-white">Item Name</label>
+          <input type="text" class="form-control" placeholder="Enter Item Name" id="itemname" name="itemname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="category" class="text-white">Category</label>
+          <input type="text" class="form-control" placeholder="Enter Category" id="category" name="category" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity" class="text-white">Quantity</label>
+          <input type="number" placeholder="Enter Quantity" class="form-control" id="quantity" name="quantity" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="price" class="text-white">Price Per Item</label>
+          <input type="number" step="0.01" placeholder="Enter Price" class="form-control" id="price" name="price" required> 
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <a href="index">Return to the Main Page</a> 
+    </div>
+  </div>
+
+<script>
+  // Disable form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Get the forms we want to add validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
+
+</body>
+</html>

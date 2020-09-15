@@ -1,0 +1,28 @@
+<!--
+ * delete-an-item.ejs: HTML File below will give us an UI to delete an item.
+ * @author: Sumitha Ravindran
+ * @date: 25/May/2020 
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel='stylesheet' href='/stylesheets/style.css' />
+     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+ </head>
+ <body class="bg-dark">
+    <h1 class = "text-info text-center">Delete an Item Name</h1>
+    <div class="col-md-6 m-auto">
+    <div class="card card-body">  
+     
+         <form align="center" action="/inventory/delete" method="POST">
+         <label>Item Name: </label>
+         <input type="text" placeholder="Enter an item" name="itemName" required>
+         <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+         <a href="index" class="text-center">Return to the Main Page</a> 
+    </div>
+    </div>
+ </body>
+ </html>
