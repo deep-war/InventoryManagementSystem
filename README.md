@@ -5,6 +5,8 @@ The app also provides an option to track price hikes of more than 5$ per product
 
 The project has a login and registration page for authentication of the manager. The manager needs to register himself before logging into the system.
 
+The demo video can be viewed at: https://youtu.be/ixN-tgFhRyQ
+
 ## Usage
 
 ### Install node.js to the system.
