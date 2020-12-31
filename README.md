@@ -7,6 +7,8 @@ The project has a login and registration page for authentication of the manager.
 
 The demo video can be viewed at: *https://youtu.be/ixN-tgFhRyQ*
 
+The ER Diagram for the system can be found at : *https://github.com/deep-war/InventoryManagementSystem/blob/master/HW%233_GR07_ERDiagram.jpg*
+
 ## User Stories
 
 The following features are implemented:
