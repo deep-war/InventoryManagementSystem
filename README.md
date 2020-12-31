@@ -5,7 +5,7 @@ The app also provides an option to track price hikes of more than 5$ per product
 
 The project has a login and registration page for authentication of the manager. The manager needs to register himself before logging into the system.
 
-The demo video can be viewed at: https://youtu.be/ixN-tgFhRyQ
+The demo video can be viewed at: *https://youtu.be/ixN-tgFhRyQ*
 
 ## Usage
 
@@ -45,3 +45,5 @@ Inventory Management System requires the following software to be installed:
 * A version of Node.js at least 8 or greater
 * mysql, version 2.8.9 or greater
 * Postman to check App endpoints 
+
+###### *Source Code will be provided upon request - Please contact deepthi.warrier@gmail.com for more info*
