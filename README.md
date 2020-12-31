@@ -7,6 +7,26 @@ The project has a login and registration page for authentication of the manager.
 
 The demo video can be viewed at: *https://youtu.be/ixN-tgFhRyQ*
 
+## User Stories
+
+The following features are implemented:
+```sh
+- [X] Login
+- [X] Inventory Tracking
+  - [X] Add Items
+  - [X] View Items
+  - [X] Delete Items
+  - [X] Update Price of an Item
+- [X] Track price hikes of more than 5$ per product
+```
+
+The following DB features are implemented:
+```sh
+- [X] Triggers
+- [X] Views
+- [X] Constraints
+```
+
 ## Usage
 
 ### Install node.js to the system.
