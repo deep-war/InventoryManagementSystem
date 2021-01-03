@@ -36,16 +36,6 @@ The following DB features are implemented:
 https://nodejs.org/en/
 ```
 
-### Clone the buildpack
-```sh
-git clone https://github.com/deep-war/HW-3_Grp07_DB.git
-```
-
-### change directory to the main folder
-```sh
-cd HW-3_Grp07_DB
-```
-
 ### Run the command npm install
 ```sh
 npm install
