@@ -1,0 +1,72 @@
+<!--
+ * index.ejs: HTML File to show the landing page which has the buttons to the other pages.
+ * @author: Group:7: Deepthi Warrier, Adam Shandi, Sumitha Ravindran
+ * @date: 22/May/2020 
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <style>
+      .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    </style>
+  </head>
+  <body>
+    <h3 class="text-center"> Welcome to TCSS-545 Inventory Management System</h3>  
+    <div class="col-md-6 m-auto">
+      <div class="text-center">          
+
+        <p class="aligncenter">
+          <img src="https://www.bellevuedowntown.com/_files/images/8_16_17_member_university_of_washington.png" alt="Stickman" width="50" height="50" class="center">
+        </p>
+        
+        <div class="btn-group">
+          <form action="/inventory/item-list" >
+          <button type="submit">View Items</button>
+          </form>
+        </div>
+
+        <div class="btn-group">
+          <form action="/inventory/add-item" >
+          <button type="submit">Add Item</button>
+          </form>
+        </div>
+        
+        <div class="btn-group">
+          <form action="/inventory/delete-item">
+          <button type="submit">Delete an Item</button>
+          </form>
+        </div>
+
+        <div class="btn-group">
+          <form action="/inventory/update-price" >
+          <button type="submit">Update ItemPrice</button>
+          </form>
+        </div>
+
+        <div class="btn-group">
+          <form action="/inventory/price-hike-view" >
+          <button type="submit">View price hike</button>
+          </form>
+        </div>
+        
+      </div>
+      <br>
+      <br>
+      <div class="text-center">
+        <a href="/" class="text-center">Logout</a> 
+      </div>      
+    </div>    
+  </body>  
+</html>

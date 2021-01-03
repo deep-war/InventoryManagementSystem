@@ -1,0 +1,27 @@
+<!--
+ * error.ejs: The error page.
+  @author: Deepthi Warrier, Sumitha Ravindran
+ * @date: 27/May/2020 
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Error Page</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+ 
+ </head>
+ <body class="bg-dark">
+   <div class="col-md-6 m-auto">
+     <div class="card card-body">
+        <h2 class="text-danger"><%= message %></h2>
+        <%
+          if(error !== undefined || error !== null){             
+        %>
+            <h2 class="text-danger"><%= error.status %></h2> 
+        <% } %>
+
+        <a href="index">Return to the Main Page</a> 
+ </body>
+ </html>

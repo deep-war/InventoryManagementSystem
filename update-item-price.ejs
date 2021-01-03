@@ -1,0 +1,36 @@
+<!--
+ * update-item-price.ejs: HTML File to update the items using item name.
+ * @author: Sumitha Ravindran
+ * @date: 25/May/2020 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel='stylesheet' href='/stylesheets/style.css' />
+     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+ </head>
+ <body class="bg-dark">
+     <h1 class = "text-info text-center">Update the Price of an Item</h1>
+     <div class="col-md-6 m-auto">
+        <div class="card card-body">       
+         <form action="/inventory/update" method="POST">
+            <div class="form-group">
+                <label for="itemname" class="text-white">Item Name</label>
+                <input type="text" placeholder="Enter Item Name" name="itemName" class="form-control" required>
+            </div>
+         
+            <div class="form-group">
+                <label for="pricePerItem" class="text-white">Price</label>
+                <input type="number" step="0.01" placeholder="Enter Price" name="pricePerItem" class="form-control" required>
+            </div>
+         
+            <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+         <a href="index">Return to the Main Page</a> 
+     </div> 
+     </div>   
+ </body>
+ </html>

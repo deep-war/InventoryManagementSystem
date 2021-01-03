@@ -1,0 +1,71 @@
+<!--
+ * login.ejs: HTML File to list add an item in the items table.
+ * @author: Adam Shandi, Deepthi Warrier
+ * @date: 26/May/2020 
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+</head>
+
+<body class="bg-dark">
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+          <%
+          if(errorMsg !== undefined || errorMsg !== null){ 
+            if(errorMsg.length!=0){          
+          %>
+            <label class="text-danger"><%=errorMsg%></label>
+          <% } } %>
+        <form action="/users/log" method="POST" class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username" required/>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" required/>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <p class="lead mt-4">
+          No Account? <a href="/users/register">Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+
+</body>
+</html>
